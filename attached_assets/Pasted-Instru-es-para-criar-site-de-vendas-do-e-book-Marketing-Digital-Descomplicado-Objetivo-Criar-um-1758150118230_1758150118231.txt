@@ -1,0 +1,92 @@
+Instruções para criar site de vendas do e-book “Marketing Digital Descomplicado”
+
+Objetivo:
+Criar uma landing page moderna, simples e responsiva para vender o e-book por R$ 19,99, com botão de compra redirecionando para o anúncio no GGMAX. Hospedagem gratuita pelo GitHub Pages.
+
+Tecnologias:
+
+HTML + CSS (básico ou com TailwindCSS)
+
+Sem backend necessário
+
+Responsivo para mobile e desktop
+
+Estrutura do site:
+
+Header / Hero:
+
+Título chamativo: “Marketing Digital Descomplicado – Seu Guia Prático pra Ganhar Dinheiro Online”
+
+Subtítulo curto motivacional
+
+Imagem da capa do e-book (opcional)
+
+Seção Sobre o E-book:
+
+Texto detalhado: benefícios, aprendizado e bônus
+
+Exemplo de texto:
+
+Você quer ganhar dinheiro online, mas não sabe por onde começar? Este e-book é seu guia completo para transformar internet em renda real.
+Com ele você vai aprender:
+✅ Como funciona o marketing digital e seus pilares essenciais
+✅ Os melhores modelos de negócio online
+✅ Estratégias de tráfego gratuito e pago
+✅ Como transformar seguidores em clientes
+✅ Ferramentas essenciais
+✅ Roteiro de 30 dias pra sair do zero
+Bônus exclusivo: checklist dos primeiros 7 dias
+
+
+Seção Benefícios / Lista:
+
+Bullet points claros
+
+Usar emojis ou cores neon para destaque
+
+Preço e Oferta:
+
+Preço: R$ 19,99 destacado
+
+Texto de incentivo: “Oferta de entrada, fácil de começar!”
+
+Call-to-Action (CTA):
+
+Botão grande escrito: “Quero meu E-book Agora 🚀”
+
+Link configurável para o anúncio do GGMAX:
+https://www.ggmax.com.br/anuncio/marketing-digital-aprenda-a-ganhar-dinheiro-online
+
+Rodapé:
+
+Nome da loja: “Corsinha Store © 2025”
+
+Estilo Visual:
+
+Fundo escuro (preto ou roxo)
+
+Texto principal em branco, com destaques neon rosa e azul
+
+Botão CTA vibrante (roxo, rosa ou azul neon)
+
+Fonte moderna, sem serifa
+
+Hospedagem no GitHub Pages:
+
+Criar repositório: ebook-marketing-digital
+
+Subir arquivos: index.html + style.css (ou usar Tailwind inline)
+
+Configurar Pages: Settings > Pages > Deploy from branch (main / root)
+
+GitHub gera link público: ex: https://corsinha.github.io/ebook-marketing-digital
+
+Extras / Dicas:
+
+Certifique-se de que o botão CTA redirecione direto para o site de compra.
+
+Se quiser imagens, usar apenas fontes livres de direitos.
+
+Pode adicionar prova social: prints ou depoimentos.
+
+Testar responsividade em mobile antes do deploy.

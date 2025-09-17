@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Digital Descomplicado - Seu Guia Prático pra Ganhar Dinheiro Online</title>
+    <meta name="description" content="Aprenda a ganhar dinheiro online com o e-book Marketing Digital Descomplicado. Estratégias práticas, ferramentas essenciais e roteiro de 30 dias por apenas R$ 19,99.">
+    <meta property="og:title" content="Marketing Digital Descomplicado - E-book por R$ 19,99">
+    <meta property="og:description" content="Transforme internet em renda real com nosso guia completo de marketing digital. Inclui bônus exclusivo!">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --background: 12 8% 8%;
+            --foreground: 0 0% 95%;
+            --card: 210 15% 12%;
+            --card-foreground: 0 0% 95%;
+            --card-border: 210 15% 20%;
+            --primary: 320 100% 70%;
+            --primary-foreground: 0 0% 10%;
+            --secondary: 210 15% 18%;
+            --secondary-foreground: 0 0% 90%;
+            --muted: 210 15% 16%;
+            --muted-foreground: 0 0% 70%;
+            --accent: 200 100% 65%;
+            --accent-foreground: 0 0% 10%;
+            --border: 210 15% 18%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--accent) / 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .hero-text h1 {
+                font-size: 4rem;
+            }
+        }
+
+        .hero-text .highlight {
+            color: hsl(var(--primary));
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-text .subtitle {
+                font-size: 1.5rem;
+            }
+        }
+
+        .hero-text .description {
+            font-size: 1.125rem;
+            color: hsl(var(--secondary-foreground));
+            margin-bottom: 2rem;
+            max-width: 28rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-cta {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.8));
+            color: hsl(var(--primary-foreground));
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary) / 0.7));
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px hsl(var(--primary) / 0.25);
+        }
+
+        .price-info {
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .price-info {
+                text-align: left;
+            }
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: hsl(var(--primary));
+        }
+
+        .price-subtitle {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-image {
+                justify-content: flex-end;
+            }
+        }
+
+        .ebook-cover {
+            position: relative;
+        }
+
+        .ebook-cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.3), hsl(var(--accent) / 0.3));
+            border-radius: 0.5rem;
+            filter: blur(1rem);
+            transform: scale(1.1);
+            z-index: -1;
+        }
+
+        .ebook-cover img {
+            width: 20rem;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .ebook-cover img {
+                width: 24rem;
+            }
+        }
+
+        .ebook-cover img:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.125rem;
+            color: hsl(var(--muted-foreground));
+            max-width: 32rem;
+            margin: 0 auto 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 64rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .benefit-card {
+            background-color: hsl(var(--card));
+            border: 1px solid hsl(var(--card-border));
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .benefit-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .check-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: hsl(var(--primary-foreground));
+            font-weight: 600;
+        }
+
+        .benefit-text {
+            color: hsl(var(--card-foreground));
+            font-weight: 500;
+        }
+
+        .bonus-card {
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1));
+            border: 1px solid hsl(var(--primary) / 0.3);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .bonus-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .bonus-icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.875rem;
+        }
+
+        .bonus-text {
+            flex: 1;
+        }
+
+        .bonus-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: hsl(var(--primary));
+            margin-bottom: 0.25rem;
+        }
+
+        .price-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card) / 0.5));
+        }
+
+        .price-card {
+            max-width: 32rem;
+            margin: 0 auto;
+            background-color: hsl(var(--card));
+            border: 1px solid hsl(var(--card-border));
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            text-align: center;
+        }
+
+        .price-card h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .price-card h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .big-price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: hsl(var(--primary));
+            margin-bottom: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .big-price {
+                font-size: 4.5rem;
+            }
+        }
+
+        .price-subtitle {
+            font-size: 1.125rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-large {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-text {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            border-top: 1px solid hsl(var(--border));
+            padding-top: 1.5rem;
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+        }
+
+        @media (min-width: 768px) {
+            .features-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .check-small {
+            color: hsl(var(--primary));
+        }
+
+        .footer {
+            background-color: hsl(var(--card));
+            border-top: 1px solid hsl(var(--card-border));
+            padding: 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+        }
+
+        .dot-primary {
+            background-color: hsl(var(--primary));
+        }
+
+        .dot-accent {
+            background-color: hsl(var(--accent));
+        }
+
+        .brand-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .footer-text {
+            color: hsl(var(--muted-foreground));
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .disclaimer {
+            border-top: 1px solid hsl(var(--border) / 0.5);
+            padding-top: 1rem;
+            font-size: 0.75rem;
+            color: hsl(var(--muted-foreground));
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Marketing Digital <span class="highlight">Descomplicado</span></h1>
+                <p class="subtitle">Seu Guia Prático pra Ganhar Dinheiro Online</p>
+                <p class="description">
+                    Transforme a internet em renda real com estratégias comprovadas e um roteiro passo a passo de 30 dias.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://www.ggmax.com.br/anuncio/marketing-digital-aprenda-a-ganhar-dinheiro-online" 
+                       target="_blank" class="btn-primary">
+                        Quero meu E-book Agora 🚀
+                    </a>
+                    <div class="price-info">
+                        <div class="price">R$ 19,99</div>
+                        <div class="price-subtitle">Oferta de entrada, fácil de começar!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="ebook-cover">
+                    <img src="attached_assets/generated_images/Marketing_Digital_e-book_cover_2d64bda6.png" 
+                         alt="Capa do E-book Marketing Digital Descomplicado">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">O que você vai aprender</h2>
+            <p class="section-description">
+                Você quer ganhar dinheiro online, mas não sabe por onde começar? Este e-book é seu guia completo para transformar internet em renda real.
+            </p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-content">
+                        <div class="check-icon">✓</div>
+                        <p class="benefit-text">Como funciona o marketing digital e seus pilares essenciais</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-content">
+                        <div class="check-icon">✓</div>
+                        <p class="benefit-text">Os melhores modelos de negócio online</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-content">
+                        <div class="check-icon">✓</div>
+                        <p class="benefit-text">Estratégias de tráfego gratuito e pago</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-content">
+                        <div class="check-icon">✓</div>
+                        <p class="benefit-text">Como transformar seguidores em clientes</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-content">
+                        <div class="check-icon">✓</div>
+                        <p class="benefit-text">Ferramentas essenciais para automação</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-content">
+                        <div class="check-icon">✓</div>
+                        <p class="benefit-text">Roteiro de 30 dias pra sair do zero</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonus -->
+            <div class="bonus-card">
+                <div class="bonus-content">
+                    <div class="bonus-icon">🎁</div>
+                    <div class="bonus-text">
+                        <div class="bonus-title">Bônus Exclusivo</div>
+                        <p>Bônus exclusivo: checklist dos primeiros 7 dias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Section -->
+    <section class="price-section">
+        <div class="container">
+            <div class="price-card">
+                <h2>Comece Agora por Apenas</h2>
+                <div class="big-price">R$ 19,99</div>
+                <p class="price-subtitle">Oferta de entrada, fácil de começar!</p>
+                
+                <a href="https://www.ggmax.com.br/anuncio/marketing-digital-aprenda-a-ganhar-dinheiro-online" 
+                   target="_blank" class="btn-primary btn-large">
+                    Quero meu E-book Agora 🚀
+                </a>
+                
+                <p class="guarantee-text">
+                    Acesso imediato após a compra • Satisfação garantida
+                </p>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <span class="check-small">✓</span>
+                        <span>Acesso vitalício</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-small">✓</span>
+                        <span>Bônus inclusos</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-small">✓</span>
+                        <span>Suporte incluso</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="dot dot-primary"></div>
+                <span class="brand-name">Corsinha Store</span>
+                <div class="dot dot-accent"></div>
+            </div>
+            <p class="footer-text">© 2025 Corsinha Store. Todos os direitos reservados.</p>
+            <div class="disclaimer">
+                <p>Este produto é destinado apenas para fins educacionais. Os resultados podem variar de acordo com a dedicação e aplicação das estratégias apresentadas.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
